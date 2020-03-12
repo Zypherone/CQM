@@ -23,7 +23,17 @@ var quizQnA = {
 //console.log(Map.prototype.size(quizQnA));
 
 var quizQnA = [
-  ["question", 
+  ["question 1", 
+    [
+      "answer", "alternative 1", "alternative 2", "alternative 3"
+    ]
+  ],
+  ["question 2", 
+    [
+      "answer", "alternative 1", "alternative 2", "alternative 3"
+    ]
+  ],
+  ["question 3", 
     [
       "answer", "alternative 1", "alternative 2", "alternative 3"
     ]
@@ -40,24 +50,10 @@ for(q=0;q<quizQnA.length;q++) {
 
   var ul = document.createElement('ul');
 
-
-  /*
-  var ul = document.createElement('ul');
-  var opt1 = document.createElement('li');
-  var opt2 = document.createElement('li');
-  var opt3 = document.createElement('li');
-  */
-  /*
-  quizQnA[q][1].forEach(element => {
-    console.log(element);
-  });
-  */
-
   h2.innerText = quizQnA[q][0];
 
   quizContainer.append(h2);
   quizContainer.append(ul);
-
 
   // Copy options into a new array so we can randomise it.
   
@@ -65,9 +61,6 @@ for(q=0;q<quizQnA.length;q++) {
   var actualAns = tempArr[0];
   var length = quizQnA[q][1].length;
   var ans = quizQnA[q][1][0];
-  //console.log(ans);
-  
-  console.log(length);  
 
   for(o=0;o<length;o++) {
     
@@ -79,14 +72,10 @@ for(q=0;q<quizQnA.length;q++) {
     var v = Math.floor(Math.random()*tempArr.length);
     var text = tempArr.splice(v,1);
     
-    
-    opt.innerText = text;
-
-    
+    opt.innerText = text
 
     opt.addEventListener('click', function() {
-      //if quizQnA[q][1][0] ==  )
-      //console.log(this.innerText);
+      
       if (actualAns.indexOf(this.innerText) == 0) {
         console.log("Win");
       } else {
