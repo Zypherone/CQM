@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CQM - Coding Quiz Master</title>
+    <link rel="stylesheet" href="styles3.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <span id="highscore">View Highscore</span>
+      <span id="timer">00</span>
+    </nav>
+    
+    <div id="quiz-container">
+
+      <div id="quiz-intro">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalise your score/time by ten seconds.</p>
+        <button id="quiz-start-button">Start Quiz</button>
+      </div>
+
+      <div id="quiz-template" class="quiz-block">
+        <h2>Question</h2>
+        <ul></ul>
+        <div class="result"></div>
+      </div>
+      
+      <div id="quiz-completed">
+        <h1>All done!</h1>
+        <p>Your final score is: <span id="final-score"></span></p>
+        <label>
+          <span>Your initials</span>
+          <input type="text" name="initials" id="initials" />
+          <input type="submit" value="Submit" id="initials-submit-button" />
+        </label>
+      </div>
+
+      <div id="highscore-chart">
+        <h1>Highscores</h1>
+        <ul id="chart-score"></ul>
+        <button id="back"><b>&#8592;</b> Go Back</button>
+        <button id="clear">Clear Chart</button>
+      </div>
+    </div>
+    <script src="script3.js"></script>
+  </body>
+</html>

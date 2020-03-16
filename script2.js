@@ -1,8 +1,8 @@
 // Lets create a the questions and answer
 
 /*
-var quizQnA = {
-  0 : {
+var quizQnA = [
+  {
     question: "test",
     answer: [
       "Option One",
@@ -18,7 +18,7 @@ var quizQnA = {
     ]
   }
 
-}
+]
 */
 //console.log(Map.prototype.size(quizQnA));
 
@@ -57,7 +57,7 @@ for(q=0;q<quizQnA.length;q++) {
 
   // Copy options into a new array so we can randomise it.
   
-  var tempArr = quizQnA[q][1];
+  var tempArr = quizQnA[q][1];//quizQnA
   var actualAns = tempArr[0];
   var length = quizQnA[q][1].length;
   var ans = quizQnA[q][1][0];
