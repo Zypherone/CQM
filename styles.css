@@ -121,6 +121,130 @@ button {
 }
 
 
+ul,
+li {
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
 ul#chart-score li {
+  background: #4d4242;
   list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  margin: 15px 0;
+  padding: 15px;
+}
+
+ul#chart-score li:nth-child(even) {
+  background: rgb(0,143,104);
+}
+
+ul#chart-score .score {
+  float: right;
+}
+
+.quiz-block ul {
+  counter-reset: my-sec-counter;
+}
+
+.quiz-block ul,
+.quiz-block li {
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-block li {
+  background: #fc4a4a;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 15px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.quiz-block li:hover {
+  background: #f73838;
+}
+
+/*
+.quiz-block li:before {
+  /* background: white; *
+  border: 1px solid black;
+  /*border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;*
+  background-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+
+  content: "A";
+  /*
+  border-radius: 30px;
+  margin-left: -10px;
+  margin-right: 5px;
+    padding: 11px 15px;
+  /* left: -30px; */
+  /* content: " "; *
+}
+*/
+
+.quiz-block li:before {
+  
+  
+  /*border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;*/
+  background-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+  border-radius: 10px;
+
+  content: "A";
+
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  bottom: 5px;
+  width: 40px;
+  line-height: 35px;
+    text-align: center;
+    
+  /*
+  border-radius: 30px;
+  margin-left: -10px;
+  margin-right: 5px;
+    padding: 11px 15px;
+  /* left: -30px; */
+  /* content: " "; */
+}
+
+.quiz-block li:after {
+  background: white; 
+
+  
+  /*border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;
+  background-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+  /*
+  counter-increment: my-sec-counter;
+  content: counter(my-sec-counter, upper-alpha);
+*/
+
+  counter-increment: my-sec-counter;
+  content: counter(my-sec-counter, upper-alpha);
+
+  border-radius: 10px;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  bottom: 7px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+
+  /*
+  background:  white;
+
+  border-radius: 30px;
+  margin-left: -10px;
+  margin-right: 5px;
+  padding: 11px 15px;
+  /* left: -30px; */
+  /* content: " "; */
 }
