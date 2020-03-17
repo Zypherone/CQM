@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav id="nav">
+    <nav id="nav" class="active">
       <span id="highscore">View Highscore</span>
       <span id="timer">00</span>
     </nav>
     
     <div id="quiz-container">
 
-      <div id="quiz-intro">
+      <div id="quiz-intro" class="active">
         <h1>Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalise your score/time by ten seconds.</p>
         <button id="quiz-start-button">Start Quiz</button>
@@ -31,9 +31,9 @@
         <h1>All done!</h1>
         <p>Your final score is: <span id="final-score"></span></p>
         <label>
-          <span>Your initials</span>
-          <input type="text" name="initials" id="initials" />
-          <input type="submit" value="Submit" id="initials-submit-button" />
+          <!--<span>Your initials</span>-->
+          <input type="text" name="initials" id="initials" placeholder="Type your Initials" />
+          <button id="initials-submit-button">Submit</button>
         </label>
       </div>
 
