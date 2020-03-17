@@ -22,3 +22,7 @@ https://zypherone.github.io/CQM/
 
 ## Screenshots of examples
 
+![Screenshot](https://raw.githubusercontent.com/Zypherone/CQM/master/screenshots/cqm-01.jpg?raw=true "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/Zypherone/CQM/master/screenshots/cqm-02.jpg?raw=true "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/Zypherone/CQM/master/screenshots/cqm-03.jpg?raw=true "Screenshot")
+
