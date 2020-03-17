@@ -109,6 +109,12 @@ function displayHighscoreChart() {
   
     allScores.forEach(function(data) {
       
+  // Check to see if the scoresData variable is filled.
+  if (scoresData) {
+    scoresData = JSON.parse(scoresData ? scoresData : "[]");
+  
+    scoresData.forEach(function(data) {
+      
       var scoreItem = document.createElement('li');
       scoreItem.innerHTML = "<span class='name'>" + data.initials + "</span>";
       scoreItem.innerHTML += "<span class='score'>" + data.score + "</span>";
