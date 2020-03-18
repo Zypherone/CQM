@@ -1,0 +1,265 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9fbfd;
+}
+/*
+#quiz-template {
+  display: none;
+}
+*/
+nav {
+  background: #b71c1c;
+  border-bottom: 1px solid #7f0000;
+  color: white;
+  display: none;
+  height: 30px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+nav span {
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+}
+
+#timer {
+  cursor: auto;
+  float: right;
+}
+
+#timer::before {  
+  content: "Time Remaining: ";
+}
+
+#timer::after {  
+  content: " Seconds";
+}
+
+#quiz-container {
+  margin: 150px auto;
+  width: 700px;
+}
+
+#quiz-intro {
+  display: none;
+  text-align: center;
+}
+
+button {
+  background: #b71c1c;
+  border: 1px solid #7f0000;
+  border-radius: 30px;
+  
+  color: white;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#quiz-completed label {
+  position: relative;
+    width: 300px;
+    display: block;
+}
+
+#initials {
+  color: #ffffff;
+  padding: 15px 20px;
+  background: #f05545;
+  border: 1px solid #7f0000;
+
+  padding: 15px 110px 15px 20px;
+  background: #f05545;
+  border: 1px solid #7f0000;
+  width: 100%;
+  border-radius: 5px; 
+
+
+}
+/* Edge */
+::-webkit-input-placeholder { color: #ffffff; }
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder      { color: #ffffff; }
+::placeholder               { color: #ffffff; }
+
+#initials-submit-button {
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  bottom: 3px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.quiz-block {
+  display: none;
+}
+
+#quiz-completed,
+#highscore-chart {
+  display: none;
+}
+/*
+.inactive {
+  display: none;
+  /*opacity: 0;*
+}
+*/
+
+.active {
+  display: block !important;
+}
+
+.highlight {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear; 
+  animation-name: anim; 
+  background: #f05545;
+  border-radius: 30px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #4d4242;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+}
+
+@keyframes anim {
+  0% {
+    background: #f05545;
+  }
+}
+
+@keyframes anim-half {
+  100% {
+    background: #b71c1c;
+  }
+}
+
+
+ul,
+li {
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+ul#chart-score li {
+  background: #f05545;
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  margin: 15px 0;
+  padding: 15px;
+}
+
+ul#chart-score li:nth-child(even) {
+  background: #b71c1c;
+}
+
+ul#chart-score .score {
+  float: right;
+}
+
+.quiz-block ul {
+  counter-reset: my-sec-counter;
+}
+
+.quiz-block ul,
+.quiz-block li {
+  cursor: pointer;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-block li {
+  background: #b71c1c;
+  border-radius: 5px;
+  color: #ffffff;
+  margin: 15px 0;
+  padding: 15px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.quiz-block li:hover {
+  background: #f05545;
+}
+
+/*
+.quiz-block li:before {
+  /* background: white; *
+  border: 1px solid black;
+  /*border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;*
+  background-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66));
+
+  content: "A";
+  /*
+  border-radius: 30px;
+  margin-left: -10px;
+  margin-right: 5px;
+    padding: 11px 15px;
+  /* left: -30px; */
+  /* content: " "; *
+}
+*/
+
+.quiz-block li:before {
+  
+  
+  /*border-image: linear-gradient(45deg, rgb(0,143,104), rgb(250,224,66)) 1;*/
+  background-image: linear-gradient(45deg, #b71c1c,   #f05545);
+  border-radius: 10px;
+
+  content: "A";
+
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  bottom: 5px;
+  width: 40px;
+  line-height: 35px;
+  text-align: center;
+
+}
+
+.quiz-block li:after {
+  background: white; 
+
+  counter-increment: my-sec-counter;
+  content: counter(my-sec-counter, upper-alpha);
+  color: #000000; 
+  border-radius: 10px;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  bottom: 7px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+
+ }
